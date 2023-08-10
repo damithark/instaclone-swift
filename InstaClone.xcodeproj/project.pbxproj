@@ -43,6 +43,7 @@
 		A2A296822A70069A000DD136 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A296812A70069A000DD136 /* SearchViewModel.swift */; };
 		A2AA357F2A80256900EB04F8 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA357E2A80256900EB04F8 /* EditProfileView.swift */; };
 		A2AA35832A802A5700EB04F8 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA35822A802A5700EB04F8 /* EditProfileViewModel.swift */; };
+		A2AA35852A85198E00EB04F8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA35842A85198E00EB04F8 /* ImageUploader.swift */; };
 		A2DE2D9F2A4235CA0098CE50 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2D9E2A4235CA0098CE50 /* SearchView.swift */; };
 		A2DE2DA12A4239990098CE50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2DA02A4239990098CE50 /* Constants.swift */; };
 		A2DE2DA32A423A230098CE50 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2DA22A423A230098CE50 /* LoginView.swift */; };
@@ -82,6 +83,7 @@
 		A2A296812A70069A000DD136 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A2AA357E2A80256900EB04F8 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		A2AA35822A802A5700EB04F8 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		A2AA35842A85198E00EB04F8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		A2DE2D9E2A4235CA0098CE50 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A2DE2DA02A4239990098CE50 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A2DE2DA22A423A230098CE50 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A2A2967D2A700576000DD136 /* UserService.swift */,
+				A2AA35842A85198E00EB04F8 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				A2A296782A66CCC1000DD136 /* RegistrationViewModel.swift in Sources */,
 				A242E9472A44B85C00A43881 /* IGTextFieldModifier.swift in Sources */,
 				A2A151282A48285000749C8B /* MyProfileView.swift in Sources */,
+				A2AA35852A85198E00EB04F8 /* ImageUploader.swift in Sources */,
 				A21A54D02A5F27C2008F9551 /* UploadPostViewModel.swift in Sources */,
 				A2DE2DA12A4239990098CE50 /* Constants.swift in Sources */,
 				A2A296752A66C8C7000DD136 /* ContentViewModel.swift in Sources */,

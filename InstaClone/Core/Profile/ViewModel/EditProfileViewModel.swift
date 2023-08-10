@@ -20,6 +20,8 @@ class EditProfileViewModel: ObservableObject {
     @Published var fullName = ""
     @Published var bio = ""
     
+    private var uiImageForUpload: UIImage?
+    
     init(user: User) {
         self.user = user
     }
@@ -28,16 +30,22 @@ class EditProfileViewModel: ObservableObject {
         guard let item = item else { return }
         
         guard let data = try? await item.loadTransferable(type: Data.self) else { return }
-        guard let uiImage = UIImage(data: data) else { return }
-        self.profileImage = Image(uiImage: uiImage)
+        guard let selectedImg = UIImage(data: data) else { return }
+        self.uiImageForUpload = selectedImg
+        self.profileImage = Image(uiImage: selectedImg)
     }
     
     func updateUserData() async throws {
         
         // Update profile image if changed
-        
-        
         var profileData = [String: Any]()
+        
+        if let profImgForUpload = uiImageForUpload {
+            let imageUrl = try? await ImageUploader.uploadImage(image: profImgForUpload)
+            profileData["profileImageUrl"] = imageUrl
+        }
+        
+        
         // udate name if changed
         if !fullName.isEmpty && user.fullName != fullName {
             profileData["fullName"] = fullName
