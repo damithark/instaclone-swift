@@ -10,12 +10,13 @@ import SwiftUI
 struct MainFeedCell: View {
     
     let post: Post
+    let user: User
     
     var body: some View {
         VStack {
             // User image + username
             HStack {
-                CircleImageView(diameter: 40, imageName: post.user?.profileImgUrl ?? "")
+                CircleImageView(user: user, diameter: 40)
                 
                 Text(post.user?.username ?? "")
                     .font(.footnote)
@@ -92,6 +93,6 @@ struct MainFeedCell: View {
 
 struct MainFeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainFeedCell(post: Post.MOCK_POSTS[0])
+        MainFeedCell(post: Post.MOCK_POSTS[0], user: User.MOCK_USERS[0])
     }
 }
