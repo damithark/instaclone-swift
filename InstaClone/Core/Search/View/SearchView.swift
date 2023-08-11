@@ -19,7 +19,7 @@ struct SearchView: View {
                     ForEach(viewModel.users) { user in
                         NavigationLink (value: user) {
                             HStack {
-                                CircleImageView(user: user, diameter: 40)
+                                CircleImageView(user: user, diameter: .small)
                                 VStack (alignment: .leading) {
                                     Text(user.username)
                                         .fontWeight(.semibold)

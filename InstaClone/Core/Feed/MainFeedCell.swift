@@ -16,7 +16,7 @@ struct MainFeedCell: View {
         VStack {
             // User image + username
             HStack {
-                CircleImageView(user: user, diameter: 40)
+                CircleImageView(user: user, diameter: .small)
                 
                 Text(post.user?.username ?? "")
                     .font(.footnote)

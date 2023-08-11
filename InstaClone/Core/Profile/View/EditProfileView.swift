@@ -49,7 +49,7 @@ struct EditProfileView: View {
             
             PhotosPicker(selection: $viewModel.selectedImage) {
                 VStack {
-                    CircleImageView(user: viewModel.user, diameter: 80)
+                    CircleImageView(user: viewModel.user, diameter: .large)
                     
                     Text("Edit profile picture")
                         .font(.subheadline)
