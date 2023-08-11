@@ -251,8 +251,8 @@
 		A2752A602A3A116000D9AC24 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				A21A54CD2A5F2299008F9551 /* UploadPostView.swift */,
-				A21A54CF2A5F27C2008F9551 /* UploadPostViewModel.swift */,
+				A2AA35892A86B1A900EB04F8 /* View */,
+				A2AA358A2A86B1B300EB04F8 /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -345,6 +345,22 @@
 			isa = PBXGroup;
 			children = (
 				A2AA35822A802A5700EB04F8 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2AA35892A86B1A900EB04F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A21A54CD2A5F2299008F9551 /* UploadPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2AA358A2A86B1B300EB04F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A21A54CF2A5F27C2008F9551 /* UploadPostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
