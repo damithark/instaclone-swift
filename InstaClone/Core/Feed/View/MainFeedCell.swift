@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MainFeedCell: View {
     
@@ -26,11 +27,16 @@ struct MainFeedCell: View {
             .padding(.leading, 8)
             
             // post image
-            Image(post.imgURL)
+            KFImage(URL(string: post.imgURL))
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
                 .clipShape(Rectangle())
+//            Image(post.imgURL)
+//                .resizable()
+//                .scaledToFill()
+//                .frame(height: 400)
+//                .clipShape(Rectangle())
             
             // action button row
             HStack (spacing: 16) {

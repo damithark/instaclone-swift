@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainFeedView: View {
     
+    @StateObject var viewModel = FeedViewModel()
+    
     let postUsers = ["Nadee.Perera", "Damitha", "Yuki_Ming", "ZeldaPink", "Isuri.Thenuwara", "Greta_Hope", "Nadee.Perera"]
     let profImages = ["Prof4", "prof_img", "Prof2", "Prof3", "Prof5", "Prof1", "Prof4"]
     let postImages = ["LipstickG", "CircleLights", "FieldRunningG", "SunflowerG", "FlowerMacro", "SeaSilhouette", "FieldSittingG"]
@@ -20,7 +22,7 @@ struct MainFeedView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack (spacing: 32) {
-                    ForEach(Post.MOCK_POSTS, id: \.self) { post in
+                    ForEach(viewModel.posts, id: \.self) { post in
                         MainFeedCell(post: post, user: User.MOCK_USERS[0])
                     }
                 }
