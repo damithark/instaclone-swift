@@ -46,6 +46,8 @@
 		A2AA35852A85198E00EB04F8 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA35842A85198E00EB04F8 /* ImageUploader.swift */; };
 		A2AA35882A853EA300EB04F8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A2AA35872A853EA300EB04F8 /* Kingfisher */; };
 		A2AA358E2A87448D00EB04F8 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA358D2A87448D00EB04F8 /* FeedViewModel.swift */; };
+		A2AA35902A87C83400EB04F8 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA358F2A87C83400EB04F8 /* PostService.swift */; };
+		A2AA35942A87CEDE00EB04F8 /* PostGridItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AA35932A87CEDE00EB04F8 /* PostGridItemViewModel.swift */; };
 		A2DE2D9F2A4235CA0098CE50 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2D9E2A4235CA0098CE50 /* SearchView.swift */; };
 		A2DE2DA12A4239990098CE50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2DA02A4239990098CE50 /* Constants.swift */; };
 		A2DE2DA32A423A230098CE50 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DE2DA22A423A230098CE50 /* LoginView.swift */; };
@@ -87,6 +89,8 @@
 		A2AA35822A802A5700EB04F8 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		A2AA35842A85198E00EB04F8 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		A2AA358D2A87448D00EB04F8 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		A2AA358F2A87C83400EB04F8 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		A2AA35932A87CEDE00EB04F8 /* PostGridItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridItemViewModel.swift; sourceTree = "<group>"; };
 		A2DE2D9E2A4235CA0098CE50 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A2DE2DA02A4239990098CE50 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A2DE2DA22A423A230098CE50 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 			children = (
 				A2A2967D2A700576000DD136 /* UserService.swift */,
 				A2AA35842A85198E00EB04F8 /* ImageUploader.swift */,
+				A2AA358F2A87C83400EB04F8 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,11 +267,8 @@
 		A2752A652A3B5F4100D9AC24 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A2752A662A3B5F8000D9AC24 /* VirticalStatView.swift */,
-				A2752A6C2A3B658F00D9AC24 /* CircleImageView.swift */,
-				A242E9442A44B82700A43881 /* BlueRectButton.swift */,
-				A242E9462A44B85C00A43881 /* IGTextFieldModifier.swift */,
-				A21A54C92A5ECB0F008F9551 /* PostGridItemView.swift */,
+				A2AA35922A87CEA600EB04F8 /* ViewModel */,
+				A2AA35912A87CE9F00EB04F8 /* View */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -384,6 +386,26 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A2AA35912A87CE9F00EB04F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A21A54C92A5ECB0F008F9551 /* PostGridItemView.swift */,
+				A242E9442A44B82700A43881 /* BlueRectButton.swift */,
+				A2752A6C2A3B658F00D9AC24 /* CircleImageView.swift */,
+				A242E9462A44B85C00A43881 /* IGTextFieldModifier.swift */,
+				A2752A662A3B5F8000D9AC24 /* VirticalStatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2AA35922A87CEA600EB04F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2AA35932A87CEDE00EB04F8 /* PostGridItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,6 +493,7 @@
 				A2752A6D2A3B658F00D9AC24 /* CircleImageView.swift in Sources */,
 				A2DE2D9F2A4235CA0098CE50 /* SearchView.swift in Sources */,
 				A21A54CA2A5ECB0F008F9551 /* PostGridItemView.swift in Sources */,
+				A2AA35942A87CEDE00EB04F8 /* PostGridItemViewModel.swift in Sources */,
 				A2752A672A3B5F8000D9AC24 /* VirticalStatView.swift in Sources */,
 				A2A296822A70069A000DD136 /* SearchViewModel.swift in Sources */,
 				A2752A642A3A132D00D9AC24 /* ProfileView.swift in Sources */,
@@ -496,6 +519,7 @@
 				A21A54CE2A5F2299008F9551 /* UploadPostView.swift in Sources */,
 				A242E9432A44B2C900A43881 /* AddEmailView.swift in Sources */,
 				A2A151262A47499A00749C8B /* User.swift in Sources */,
+				A2AA35902A87C83400EB04F8 /* PostService.swift in Sources */,
 				A2752A6B2A3B649100D9AC24 /* MainFeedCell.swift in Sources */,
 				A2A151242A46175800749C8B /* CompleteSignUpView.swift in Sources */,
 				A2752A622A3A11F400D9AC24 /* MainTabView.swift in Sources */,

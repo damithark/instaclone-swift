@@ -11,10 +11,6 @@ struct ProfileView: View {
     
     let user: User
     
-    var posts: [Post] {
-        return Post.MOCK_POSTS.filter({ $0.user?.username == user.username})
-    }
-    
     var body: some View {
         ScrollView {
             VStack {
@@ -22,7 +18,7 @@ struct ProfileView: View {
                 ProfileHeaderView(user: user)
                 
                 // Post grid view
-                PostGridItemView(posts: posts)
+                PostGridItemView(user: user)
             }
         }
         .navigationTitle("Profile")
