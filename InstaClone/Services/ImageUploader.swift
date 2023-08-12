@@ -8,11 +8,26 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
+enum FirebaseStoragePath {
+    case profileImages
+    case postImages
+    
+    var value: String {
+        switch self {
+        case .profileImages:
+            return "/profile_images/"
+        case .postImages:
+            return "/post_images/"
+        }
+    }
+}
+
 struct ImageUploader {
-    static func uploadImage(image: UIImage) async throws -> String? {
+    
+    static func uploadImage(image: UIImage, path: FirebaseStoragePath) async throws -> String? {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return nil }
         let fileName = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/profile_images/\(fileName)")
+        let ref = Storage.storage().reference(withPath: "\(path.value)\(fileName)")
         
         do {
             let _ =  try await ref.putDataAsync(imageData)
@@ -23,4 +38,5 @@ struct ImageUploader {
             return nil
         }
     }
+    
 }
