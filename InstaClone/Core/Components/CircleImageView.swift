@@ -31,7 +31,7 @@ struct CircleImageView: View {
     let diameter: CircularImageSize
     
     var body: some View {
-        if let imageUrl = user.profileImgUrl {
+        if let imageUrl = user.profileImageUrl {
             KFImage(URL(string: imageUrl))
                 .resizable()
                 .scaledToFill()

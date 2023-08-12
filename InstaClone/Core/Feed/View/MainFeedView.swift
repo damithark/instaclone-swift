@@ -23,7 +23,7 @@ struct MainFeedView: View {
             ScrollView {
                 LazyVStack (spacing: 32) {
                     ForEach(viewModel.posts, id: \.self) { post in
-                        MainFeedCell(post: post, user: User.MOCK_USERS[0])
+                        MainFeedCell(post: post)
                     }
                 }
                 .padding(.top, 8)

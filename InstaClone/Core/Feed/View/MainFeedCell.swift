@@ -11,17 +11,18 @@ import Kingfisher
 struct MainFeedCell: View {
     
     let post: Post
-    let user: User
     
     var body: some View {
         VStack {
             // User image + username
             HStack {
-                CircleImageView(user: user, diameter: .small)
-                
-                Text(post.user?.username ?? "")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
+                if let user = post.user {
+                    CircleImageView(user: user, diameter: .small)
+                    
+                    Text(user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
                 Spacer()
             }
             .padding(.leading, 8)
@@ -99,6 +100,6 @@ struct MainFeedCell: View {
 
 struct MainFeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainFeedCell(post: Post.MOCK_POSTS[0], user: User.MOCK_USERS[0])
+        MainFeedCell(post: Post.MOCK_POSTS[0])
     }
 }
