@@ -36,7 +36,11 @@ struct MainFeedView: View {
                         .frame(width: 104, height: 40)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "paperplane")
+                    Image(systemName: "heart")
+                        .imageScale(.large)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image(systemName: "ellipsis.message")
                         .imageScale(.large)
                 }
             }
