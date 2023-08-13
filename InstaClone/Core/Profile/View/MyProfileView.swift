@@ -26,6 +26,13 @@ struct MyProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
+                    } label: {
+                        Image(systemName: "plus.app")
+                            .foregroundColor(.black)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
                         AuthService.shared.signOut()
                     } label: {
                         Image(systemName: "line.3.horizontal")

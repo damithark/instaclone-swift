@@ -40,7 +40,7 @@ struct MainTabView: View {
                     selectedIndex = 3
                 }
                 .tabItem {
-                    Image(systemName: "heart")
+                    Image(systemName: "play.rectangle.on.rectangle")
                 }.tag(3)
             MyProfileView(user: user)
                 .onAppear {
