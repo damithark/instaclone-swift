@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainFeedView: View {
     
+    let user: User
     @StateObject var viewModel = FeedViewModel()
     
     let postUsers = ["Nadee.Perera", "Damitha", "Yuki_Ming", "ZeldaPink", "Isuri.Thenuwara", "Greta_Hope", "Nadee.Perera"]
@@ -23,7 +24,7 @@ struct MainFeedView: View {
             ScrollView {
                 LazyVStack (spacing: 32) {
                     ForEach(viewModel.posts, id: \.self) { post in
-                        MainFeedCell(post: post)
+                        MainFeedCell(user: user, post: post)
                     }
                 }
                 .padding(.top, 8)
@@ -50,6 +51,6 @@ struct MainFeedView: View {
 
 struct MainFeedView_Previews: PreviewProvider {
     static var previews: some View {
-        MainFeedView()
+        MainFeedView(user: User.MOCK_USERS[0])
     }
 }

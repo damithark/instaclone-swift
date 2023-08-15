@@ -14,7 +14,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView (selection: $selectedIndex) {
-            MainFeedView()
+            MainFeedView(user: user)
                 .onAppear {
                     selectedIndex = 0
                 }

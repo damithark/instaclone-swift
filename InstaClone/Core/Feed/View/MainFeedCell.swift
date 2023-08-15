@@ -10,6 +10,7 @@ import Kingfisher
 
 struct MainFeedCell: View {
     
+    let user: User
     let post: Post
     
     var body: some View {
@@ -51,7 +52,7 @@ struct MainFeedCell: View {
                 Button {
                     
                 } label: {
-                    Image(systemName: "bubble.right")
+                    Image(systemName: "message")
                         .imageScale(.large)
                 }
                 
@@ -94,12 +95,13 @@ struct MainFeedCell: View {
                 .padding(.leading, 10)
                 .padding(.top, 1)
                 .foregroundColor(.gray)
+            AddCommentView(user: user, placeholder: "Add a comment...", text: "")
         }
     }
 }
 
 struct MainFeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainFeedCell(post: Post.MOCK_POSTS[0])
+        MainFeedCell(user: User.MOCK_USERS[0], post: Post.MOCK_POSTS[0])
     }
 }
