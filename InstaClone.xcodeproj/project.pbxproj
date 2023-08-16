@@ -25,6 +25,7 @@
 		A2752A6B2A3B649100D9AC24 /* MainFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2752A6A2A3B649100D9AC24 /* MainFeedCell.swift */; };
 		A2752A6D2A3B658F00D9AC24 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2752A6C2A3B658F00D9AC24 /* CircleImageView.swift */; };
 		A29B342A2A8BF791001F8C98 /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B34292A8BF791001F8C98 /* AddCommentView.swift */; };
+		A29B342D2A8CE735001F8C98 /* VideoShortsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B342C2A8CE735001F8C98 /* VideoShortsView.swift */; };
 		A2A151202A46130300749C8B /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1511F2A46130300749C8B /* CreateUsernameView.swift */; };
 		A2A151222A46162C00749C8B /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A151212A46162C00749C8B /* CreatePasswordView.swift */; };
 		A2A151242A46175800749C8B /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A151232A46175800749C8B /* CompleteSignUpView.swift */; };
@@ -74,6 +75,7 @@
 		A2752A6A2A3B649100D9AC24 /* MainFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedCell.swift; sourceTree = "<group>"; };
 		A2752A6C2A3B658F00D9AC24 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		A29B34292A8BF791001F8C98 /* AddCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
+		A29B342C2A8CE735001F8C98 /* VideoShortsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoShortsView.swift; sourceTree = "<group>"; };
 		A2A1511F2A46130300749C8B /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		A2A151212A46162C00749C8B /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		A2A151232A46175800749C8B /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A2752A5A2A3A111600D9AC24 /* Search */,
 				A2752A5F2A3A115E00D9AC24 /* TabBar */,
 				A2752A602A3A116000D9AC24 /* UploadPost */,
+				A29B342B2A8CE6E5001F8C98 /* Shorts */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -273,6 +276,14 @@
 				A2AA35912A87CE9F00EB04F8 /* View */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A29B342B2A8CE6E5001F8C98 /* Shorts */ = {
+			isa = PBXGroup;
+			children = (
+				A29B342C2A8CE735001F8C98 /* VideoShortsView.swift */,
+			);
+			path = Shorts;
 			sourceTree = "<group>";
 		};
 		A2A2966E2A60681F000DD136 /* View */ = {
@@ -492,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A151202A46130300749C8B /* CreateUsernameView.swift in Sources */,
+				A29B342D2A8CE735001F8C98 /* VideoShortsView.swift in Sources */,
 				A242E9452A44B82700A43881 /* BlueRectButton.swift in Sources */,
 				A2752A6D2A3B658F00D9AC24 /* CircleImageView.swift in Sources */,
 				A2DE2D9F2A4235CA0098CE50 /* SearchView.swift in Sources */,
