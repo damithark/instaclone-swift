@@ -9,38 +9,78 @@ import SwiftUI
 
 struct VideoShortsView: View {
     var body: some View {
-        HStack {
+        VStack {
+            HStack {
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .foregroundColor(.white)
+                        .frame(width: 34, height: 26)
+                }
+                .padding(.trailing, 10)
+            }
             Spacer()
-            VStack (spacing: 20) {
-                Button {
-                    
-                } label: {
-                    Image(systemName: "heart")
-                        .resizable()
+            HStack {
+                Spacer()
+                VStack (spacing: 20) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "heart")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                    }
+                    Text("925.5k")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .frame(width: 30, height: 30)
-                }
-                
-                Button {
+                        .frame(alignment: .center)
                     
-                } label: {
-                    Image(systemName: "message")
-                        .resizable()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "message")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                    }
+                    Text("12.5k")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .frame(width: 30, height: 30)
-                }
-                
-                Button {
+                        .frame(alignment: .center)
                     
-                } label: {
-                    Image(systemName: "paperplane")
-                        .resizable()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "paperplane")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 30)
+                    }
+                    Text("564.5k")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
-                        .frame(width: 30, height: 30)
+                        .frame(alignment: .center)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "ellipsis")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 30, height: 6)
+                    }
+                    .padding(.top, 8)
                 }
             }
+            .padding(20)
+            .background(.black)
         }
-        .padding(20)
         .background(.black)
     }
 }
