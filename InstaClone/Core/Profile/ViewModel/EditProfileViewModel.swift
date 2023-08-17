@@ -69,4 +69,8 @@ class EditProfileViewModel: ObservableObject {
         }
     }
     
+    func reloadUserData() async throws {
+        try await AuthService.shared.loadUserData()
+    }
+    
 }

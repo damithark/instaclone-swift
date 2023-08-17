@@ -20,7 +20,7 @@ struct VideoShortsView: View {
                         .foregroundColor(.white)
                         .frame(width: 34, height: 26)
                 }
-                .padding(.trailing, 10)
+                .padding(.trailing, 20)
             }
             Spacer()
             HStack {
