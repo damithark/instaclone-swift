@@ -32,6 +32,9 @@ struct PostGridItemView: View {
                     .scaledToFill()
                     .frame(width: imageDimension, height: imageDimension)
                     .clipped()
+                    .onTapGesture {
+                        
+                    }
             }
         }
     }

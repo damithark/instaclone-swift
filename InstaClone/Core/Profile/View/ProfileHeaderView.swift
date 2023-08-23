@@ -71,9 +71,9 @@ struct ProfileHeaderView: View {
                 
                 Button {
                     if user.isCurrentUser {
-                        showEditProfile.toggle()
+                        print("Share user...")
                     } else {
-                        print("Follow user...")
+                        print("Message")
                     }
                 } label: {
                     Text(user.isCurrentUser ? "Share Profile" : "Message")
