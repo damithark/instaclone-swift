@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PostGridItemViewModel           : ObservableObject {
+class PostGridItemViewModel : ObservableObject {
     
     private let user: User
     @Published var posts = [Post]()

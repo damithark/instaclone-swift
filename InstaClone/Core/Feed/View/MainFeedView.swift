@@ -12,12 +12,12 @@ struct MainFeedView: View {
     let user: User
     @StateObject var viewModel = FeedViewModel()
     
-    let postUsers = ["Nadee.Perera", "Damitha", "Yuki_Ming", "ZeldaPink", "Isuri.Thenuwara", "Greta_Hope", "Nadee.Perera"]
-    let profImages = ["Prof4", "prof_img", "Prof2", "Prof3", "Prof5", "Prof1", "Prof4"]
-    let postImages = ["LipstickG", "CircleLights", "FieldRunningG", "SunflowerG", "FlowerMacro", "SeaSilhouette", "FieldSittingG"]
-    let likes = ["249K likes", "53K likes", "309K likes", "75k likes", "209K likes", "297K likes", "409K likes"]
-    let captions = ["Showing off my new dress and hair...", "One last shot before much awaited sleep", "Wanna spend all day here...", "My garden has sun, flowers and Sunflowers <3", "Macro came better than I thought. Still loving it !!!", "Best sunset ever...Don't want this sky to change", "Take time and relax. You deserve to enjoy some sunlight."]
-    let timeStamps = ["1h ago", "21h ago", "1 day ago", "2 days ago", "6h ago", "1 week ago", "14h ago"]
+//    let postUsers = ["Nadee.Perera", "Damitha", "Yuki_Ming", "ZeldaPink", "Isuri.Thenuwara", "Greta_Hope", "Nadee.Perera"]
+//    let profImages = ["Prof4", "prof_img", "Prof2", "Prof3", "Prof5", "Prof1", "Prof4"]
+//    let postImages = ["LipstickG", "CircleLights", "FieldRunningG", "SunflowerG", "FlowerMacro", "SeaSilhouette", "FieldSittingG"]
+//    let likes = ["249K likes", "53K likes", "309K likes", "75k likes", "209K likes", "297K likes", "409K likes"]
+//    let captions = ["Showing off my new dress and hair...", "One last shot before much awaited sleep", "Wanna spend all day here...", "My garden has sun, flowers and Sunflowers <3", "Macro came better than I thought. Still loving it !!!", "Best sunset ever...Don't want this sky to change", "Take time and relax. You deserve to enjoy some sunlight."]
+//    let timeStamps = ["1h ago", "21h ago", "1 day ago", "2 days ago", "6h ago", "1 week ago", "14h ago"]
     
     var body: some View {
         NavigationStack {

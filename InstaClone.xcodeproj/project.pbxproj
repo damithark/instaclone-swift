@@ -27,6 +27,8 @@
 		A29B342A2A8BF791001F8C98 /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B34292A8BF791001F8C98 /* AddCommentView.swift */; };
 		A29B342D2A8CE735001F8C98 /* VideoShortsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B342C2A8CE735001F8C98 /* VideoShortsView.swift */; };
 		A29B342F2A8E57F2001F8C98 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B342E2A8E57F2001F8C98 /* ProfileViewModel.swift */; };
+		A29B34312A967DAB001F8C98 /* SingleUserFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B34302A967DAB001F8C98 /* SingleUserFeedView.swift */; };
+		A29B34332A967E97001F8C98 /* SingleUserFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B34322A967E97001F8C98 /* SingleUserFeedViewModel.swift */; };
 		A2A151202A46130300749C8B /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A1511F2A46130300749C8B /* CreateUsernameView.swift */; };
 		A2A151222A46162C00749C8B /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A151212A46162C00749C8B /* CreatePasswordView.swift */; };
 		A2A151242A46175800749C8B /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A151232A46175800749C8B /* CompleteSignUpView.swift */; };
@@ -78,6 +80,8 @@
 		A29B34292A8BF791001F8C98 /* AddCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
 		A29B342C2A8CE735001F8C98 /* VideoShortsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoShortsView.swift; sourceTree = "<group>"; };
 		A29B342E2A8E57F2001F8C98 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A29B34302A967DAB001F8C98 /* SingleUserFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserFeedView.swift; sourceTree = "<group>"; };
+		A29B34322A967E97001F8C98 /* SingleUserFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUserFeedViewModel.swift; sourceTree = "<group>"; };
 		A2A1511F2A46130300749C8B /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		A2A151212A46162C00749C8B /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		A2A151232A46175800749C8B /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			children = (
 				A2752A682A3B647400D9AC24 /* MainFeedView.swift */,
 				A2752A6A2A3B649100D9AC24 /* MainFeedCell.swift */,
+				A29B34302A967DAB001F8C98 /* SingleUserFeedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				A2AA358D2A87448D00EB04F8 /* FeedViewModel.swift */,
+				A29B34322A967E97001F8C98 /* SingleUserFeedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -524,12 +530,14 @@
 				A2A151282A48285000749C8B /* MyProfileView.swift in Sources */,
 				A2AA35852A85198E00EB04F8 /* ImageUploader.swift in Sources */,
 				A21A54D02A5F27C2008F9551 /* UploadPostViewModel.swift in Sources */,
+				A29B34312A967DAB001F8C98 /* SingleUserFeedView.swift in Sources */,
 				A2DE2DA12A4239990098CE50 /* Constants.swift in Sources */,
 				A2A296752A66C8C7000DD136 /* ContentViewModel.swift in Sources */,
 				A2AA358E2A87448D00EB04F8 /* FeedViewModel.swift in Sources */,
 				A2A2967E2A700576000DD136 /* UserService.swift in Sources */,
 				A2752A692A3B647400D9AC24 /* MainFeedView.swift in Sources */,
 				A21A54CC2A5ECD77008F9551 /* ProfileHeaderView.swift in Sources */,
+				A29B34332A967E97001F8C98 /* SingleUserFeedViewModel.swift in Sources */,
 				A2752A442A3A106200D9AC24 /* InstaCloneApp.swift in Sources */,
 				A2AA357F2A80256900EB04F8 /* EditProfileView.swift in Sources */,
 				A2DE2DA32A423A230098CE50 /* LoginView.swift in Sources */,

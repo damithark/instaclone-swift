@@ -33,7 +33,7 @@ struct PostGridItemView: View {
                     .frame(width: imageDimension, height: imageDimension)
                     .clipped()
                     .onTapGesture {
-                        
+                        SingleUserFeedView(posts: viewModel.posts)
                     }
             }
         }
