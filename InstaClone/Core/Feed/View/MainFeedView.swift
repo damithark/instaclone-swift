@@ -46,12 +46,12 @@ struct MainFeedView: View {
                 }
             }
         }
-        .onAppear {
-            viewModel.posts = []
-            Task {
-                try await viewModel.getPosts()
-            }
-        }
+//        .onAppear {
+//            viewModel.posts = []
+//            Task {
+//                try await viewModel.getPosts()
+//            }
+//        }
     }
 }
 
