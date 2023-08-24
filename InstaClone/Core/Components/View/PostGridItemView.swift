@@ -32,9 +32,6 @@ struct PostGridItemView: View {
                     .scaledToFill()
                     .frame(width: imageDimension, height: imageDimension)
                     .clipped()
-                    .onTapGesture {
-                        SingleUserFeedView(posts: viewModel.posts)
-                    }
             }
         }
     }
