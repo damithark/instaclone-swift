@@ -89,7 +89,6 @@ struct ProfileHeaderView: View {
                         )
                 }
                 
-                Divider()
             }
             
             // Divider
