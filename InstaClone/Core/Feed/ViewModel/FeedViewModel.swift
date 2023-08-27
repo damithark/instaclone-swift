@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 
+@MainActor
 class FeedViewModel: ObservableObject {
     
     @Published var posts = [Post]()
@@ -15,8 +16,17 @@ class FeedViewModel: ObservableObject {
     init() {
         Task { try await getPosts() }
     }
-    @MainActor
+    
     func getPosts() async throws {
         self.posts = try await PostService.fetchFeedPosts()
+    }
+    
+    func updatePostLike(selectedPost: Post) async throws {
+        
+        var postData = [String: Any]()
+        postData["isLiked"] = !selectedPost.isLiked
+        if !postData.isEmpty {
+            try await Firestore.firestore().collection("posts").document(selectedPost.id).updateData(postData)
+        }
     }
 }

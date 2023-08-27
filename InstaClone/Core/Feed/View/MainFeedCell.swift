@@ -12,6 +12,7 @@ struct MainFeedCell: View {
     
     let user: User
     let post: Post
+    let viewModel: FeedViewModel
     
     var body: some View {
         VStack {
@@ -43,7 +44,7 @@ struct MainFeedCell: View {
             // action button row
             HStack (spacing: 16) {
                 Button {
-                    Task {  }
+                    Task { try await viewModel.updatePostLike(selectedPost: post) }
                 } label: {
                     Image(systemName: post.isLiked ? "heart.fill" : "heart")
                         .imageScale(.large)
@@ -103,6 +104,6 @@ struct MainFeedCell: View {
 
 struct MainFeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainFeedCell(user: User.MOCK_USERS[0], post: Post.MOCK_POSTS[0])
+        MainFeedCell(user: User.MOCK_USERS[0], post: Post.MOCK_POSTS[0], viewModel: FeedViewModel())
     }
 }
