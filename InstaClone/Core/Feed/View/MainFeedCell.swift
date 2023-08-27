@@ -43,10 +43,11 @@ struct MainFeedCell: View {
             // action button row
             HStack (spacing: 16) {
                 Button {
-                    
+                    Task {  }
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: post.isLiked ? "heart.fill" : "heart")
                         .imageScale(.large)
+                        .foregroundColor(post.isLiked ? .red : .black)
                 }
                 
                 Button {
