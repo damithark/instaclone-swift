@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct MyProfileView: View {
+    
     let user: User
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationStack {
@@ -33,11 +35,15 @@ struct MyProfileView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        AuthService.shared.signOut()
+                        showingAlert = true
                     } label: {
                         Image(systemName: "line.3.horizontal")
                             .foregroundColor(.black)
                     }
+                    .alert("Are you sure you want to logout?", isPresented: $showingAlert) {
+                        Button("Yes", role: .none) { AuthService.shared.signOut() }
+                        Button("No", role: .cancel) {}
+                    }.tint(.black)
                 }
             }
         }
