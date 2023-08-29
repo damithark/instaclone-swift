@@ -71,6 +71,7 @@ struct ProfileHeaderView: View {
                 
                 Button {
                     if user.isCurrentUser {
+                        self.shareTapped()
                         print("Share user...")
                     } else {
                         print("Message")
@@ -97,6 +98,16 @@ struct ProfileHeaderView: View {
         .fullScreenCover(isPresented: $showEditProfile) {
             EditProfileView(user: user)
         }
+    }
+    
+    func shareTapped() {
+        guard let shareUrl = URL(string: "https://www.instagram.com") else {
+            print("No url found")
+            return
+        }
+
+        let activityVC = UIActivityViewController(activityItems: [shareUrl], applicationActivities: [])
+        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true)
     }
 }
 
