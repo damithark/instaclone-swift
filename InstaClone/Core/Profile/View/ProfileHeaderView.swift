@@ -72,7 +72,6 @@ struct ProfileHeaderView: View {
                 Button {
                     if user.isCurrentUser {
                         self.shareTapped()
-                        print("Share user...")
                     } else {
                         print("Message")
                     }

@@ -13,6 +13,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
     UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = .black
+    let defaults = UserDefaults.standard
+    defaults.set(false, forKey: "UpdateFeed")
     return true
   }
 }

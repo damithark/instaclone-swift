@@ -5,6 +5,7 @@
 //  Created by Damitha Raveendra on 2023-06-15.
 //
 
+import Foundation
 import SwiftUI
 
 struct MainFeedView: View {
@@ -46,12 +47,17 @@ struct MainFeedView: View {
                 }
             }
         }
-//        .onAppear {
-//            viewModel.posts = []
-//            Task {
-//                try await viewModel.getPosts()
-//            }
-//        }
+        .onAppear {
+            let defaults = UserDefaults.standard
+            let checkChanges = defaults.bool(forKey: "UpdateFeed")
+            if checkChanges {
+                viewModel.posts = []
+                Task {
+                    try await viewModel.getPosts()
+                    defaults.set(false, forKey: "UpdateFeed")
+                }
+            }
+        }
     }
 }
 
