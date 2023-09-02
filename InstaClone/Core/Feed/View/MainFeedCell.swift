@@ -11,7 +11,7 @@ import Kingfisher
 struct MainFeedCell: View {
     
     let user: User
-    let post: Post
+    @State var post: Post
     let viewModel: FeedViewModel
     
     var body: some View {
@@ -44,7 +44,13 @@ struct MainFeedCell: View {
             // action button row
             HStack (spacing: 16) {
                 Button {
-                    Task { try await viewModel.updatePostLike(selectedPost: post) }
+                    Task {
+                        try await viewModel.updatePostLike(selectedPost: post)
+                        post.isLiked.toggle()
+                        let defaults = UserDefaults.standard
+                        defaults.set(true, forKey: "UpdateFeed")
+                    }
+                    
                 } label: {
                     Image(systemName: post.isLiked ? "heart.fill" : "heart")
                         .imageScale(.large)

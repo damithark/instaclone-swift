@@ -47,17 +47,17 @@ struct MainFeedView: View {
                 }
             }
         }
-        .onAppear {
-            let defaults = UserDefaults.standard
-            let checkChanges = defaults.bool(forKey: "UpdateFeed")
-            if checkChanges {
-                viewModel.posts = []
-                Task {
-                    try await viewModel.getPosts()
-                    defaults.set(false, forKey: "UpdateFeed")
-                }
-            }
-        }
+//        .onAppear {
+//            let defaults = UserDefaults.standard
+//            let checkChanges = defaults.bool(forKey: "UpdateFeed")
+//            if checkChanges {
+//                viewModel.posts = []
+//                Task {
+//                    try await viewModel.getPosts()
+//                    defaults.set(false, forKey: "UpdateFeed")
+//                }
+//            }
+//        }
     }
 }
 
