@@ -11,6 +11,8 @@ import SwiftUI
 struct MainFeedView: View {
     
     let user: User
+    @State private var isShowingNotificationView = false
+    @State private var isShowingMessageView = false
     @StateObject var viewModel = FeedViewModel()
     
 //    let postUsers = ["Nadee.Perera", "Damitha", "Yuki_Ming", "ZeldaPink", "Isuri.Thenuwara", "Greta_Hope", "Nadee.Perera"]
@@ -40,12 +42,24 @@ struct MainFeedView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "heart")
                         .imageScale(.large)
+                        .onTapGesture {
+                            isShowingNotificationView = true
+                        }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "ellipsis.message")
                         .imageScale(.large)
+                        .onTapGesture {
+                            isShowingMessageView = true
+                        }
                 }
             }
+            .navigationDestination(isPresented: $isShowingNotificationView, destination: {
+                NotificationView()
+            })
+            .navigationDestination(isPresented: $isShowingMessageView, destination: {
+                MessagesView()
+            })
         }
 //        .onAppear {
 //            let defaults = UserDefaults.standard
