@@ -49,6 +49,7 @@ struct MainFeedView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "ellipsis.message")
                         .imageScale(.large)
+                        .padding(.leading, 10)
                         .onTapGesture {
                             isShowingMessageView = true
                         }

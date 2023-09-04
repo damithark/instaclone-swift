@@ -10,9 +10,36 @@ import SwiftUI
 struct NotificationCell: View {
     
     var body: some View {
-        HStack {
-            CircleImageView(user: User.MOCK_USERS[0], diameter: .medium)
-            Text(Notification.MOCK_Notification[0].caption)
+        HStack (alignment: .top) {
+            CircleImageView(user: User.MOCK_USERS[0], diameter: .small)
+                .padding(.trailing, 10)
+            Text(User.MOCK_USERS[0].username + " " + Notification.MOCK_Notification[0].caption)
+                .padding(.trailing, 10)
+            switch Notification.MOCK_Notification[0].notificationType {
+            case "Like":
+                Image("FieldSittingG")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40)
+                    .padding(.bottom)
+            case "Follower":
+            Button {
+                
+            } label: {
+                
+            }
+            case "Follow":
+            Button {
+            
+            } label: {
+            
+            }
+            default:
+                Text("")
+            }
+//            Notification.MOCK_Notification[0].notificationType == "Like" ? Button {
+//
+//            }
         }
     }
 }

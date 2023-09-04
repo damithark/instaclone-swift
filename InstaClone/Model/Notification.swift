@@ -17,8 +17,8 @@ struct Notification: Identifiable, Hashable, Codable {
 
 extension Notification {
     static var MOCK_Notification: [Notification] = [
-        .init(id: NSUUID().uuidString, caption: "liked you photo", notificationType: "", isNew: true, user: User.MOCK_USERS[0]),
-        .init(id: NSUUID().uuidString, caption: "started following you", notificationType: "", isNew: true, user: User.MOCK_USERS[1]),
-        .init(id: NSUUID().uuidString, caption: "who you might know, is on Instaclone", notificationType: "", isNew: true, user: User.MOCK_USERS[2])
+        .init(id: NSUUID().uuidString, caption: "liked you photo", notificationType: "Like", isNew: true, user: User.MOCK_USERS[0]),
+        .init(id: NSUUID().uuidString, caption: "started following you", notificationType: "Follower", isNew: true, user: User.MOCK_USERS[1]),
+        .init(id: NSUUID().uuidString, caption: "who you might know, is on Instaclone", notificationType: "Follow", isNew: true, user: User.MOCK_USERS[2])
     ]
 }

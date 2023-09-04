@@ -12,6 +12,7 @@ struct NotificationView: View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Spacer(minLength: 30)
                     NotificationCell()
                 }
             }
