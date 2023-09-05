@@ -11,36 +11,38 @@ struct NotificationCell: View {
     
     var body: some View {
         HStack (alignment: .top) {
-            CircleImageView(user: User.MOCK_USERS[0], diameter: .small)
-                .padding(.leading, 20)
-                .padding(.trailing, 5)
-            Text(User.MOCK_USERS[0].username + " " + Notification.MOCK_Notification[0].caption)
-                .font(.footnote)
-                .fontWeight(.light)
-                .padding(.trailing, 10)
-            Spacer()
-            switch Notification.MOCK_Notification[0].notificationType {
-            case "Like":
-                Image("FieldSittingG")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
-                    .padding(.bottom)
-                    .padding(.trailing, 20)
-            case "Follower":
-            Button {
+            ForEach(Notification.MOCK_Notification, id: \.self) { notification in
+                CircleImageView(user: User.MOCK_USERS[0], diameter: .small)
+                    .padding(.leading, 20)
+                    .padding(.trailing, 5)
+                Text(User.MOCK_USERS[0].username + " " + notification.caption)
+                    .font(.footnote)
+                    .fontWeight(.light)
+                    .padding(.trailing, 10)
+                Spacer()
+                switch notification.notificationType {
+                case "Like":
+                    Image("FieldSittingG")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                        .padding(.bottom)
+                        .padding(.trailing, 20)
+                case "Follower":
+                Button {
+                    
+                } label: {
+                    
+                }
+                case "Follow":
+                Button {
                 
-            } label: {
+                } label: {
                 
-            }
-            case "Follow":
-            Button {
-            
-            } label: {
-            
-            }
-            default:
-                Text("")
+                }
+                default:
+                    Text("")
+                }
             }
 //            Notification.MOCK_Notification[0].notificationType == "Like" ? Button {
 //
