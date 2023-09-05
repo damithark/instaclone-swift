@@ -12,9 +12,11 @@ struct NotificationCell: View {
     var body: some View {
         HStack (alignment: .top) {
             CircleImageView(user: User.MOCK_USERS[0], diameter: .small)
-                .padding(.horizontal, 20)
-            Spacer()
+                .padding(.leading, 20)
+                .padding(.trailing, 5)
             Text(User.MOCK_USERS[0].username + " " + Notification.MOCK_Notification[0].caption)
+                .font(.footnote)
+                .fontWeight(.light)
                 .padding(.trailing, 10)
             Spacer()
             switch Notification.MOCK_Notification[0].notificationType {
