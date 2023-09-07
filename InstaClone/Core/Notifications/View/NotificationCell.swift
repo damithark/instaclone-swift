@@ -34,12 +34,14 @@ struct NotificationCell: View {
             Button {
                 
             } label: {
-                Text("Follow")
+                Text("Following")
                     .font(.subheadline)
-                    .fontWeight(.bold)
-                    .cornerRadius(5)
-                    .background(.blue)
+                    .fontWeight(.medium)
+                    .frame(width: 100, height: 30)
+                    .background(.gray)
                     .foregroundColor(.white)
+                    .cornerRadius(6)
+                    .padding(.trailing, 20)
             }
             case "Follow":
             Button {
@@ -47,10 +49,12 @@ struct NotificationCell: View {
             } label: {
                 Text("Follow")
                     .font(.subheadline)
-                    .fontWeight(.bold)
-                    .cornerRadius(5)
+                    .fontWeight(.medium)
+                    .frame(width: 80, height: 30)
                     .background(.blue)
                     .foregroundColor(.white)
+                    .cornerRadius(6)
+                    .padding(.trailing, 20)
             }
             default:
                 Text("")
