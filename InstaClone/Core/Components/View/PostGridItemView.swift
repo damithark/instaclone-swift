@@ -26,7 +26,6 @@ struct PostGridItemView: View {
     var body: some View {
         LazyVGrid(columns: gridItems, spacing: 1) {
             ForEach(viewModel.posts) { post in
-                let _ = print("Image URL: \(post.imgURL)")
                 KFImage(URL(string: post.imgURL))
                     .resizable()
                     .scaledToFill()

@@ -9,50 +9,58 @@ import SwiftUI
 
 struct NotificationCell: View {
     
+    let notification: Notification
+    
     var body: some View {
         HStack (alignment: .top) {
-            ForEach(Notification.MOCK_Notification, id: \.self) { notification in
-                CircleImageView(user: User.MOCK_USERS[0], diameter: .small)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 5)
-                Text(User.MOCK_USERS[0].username + " " + notification.caption)
-                    .font(.footnote)
-                    .fontWeight(.light)
-                    .padding(.trailing, 10)
-                Spacer()
-                switch notification.notificationType {
-                case "Like":
-                    Image("FieldSittingG")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40)
-                        .padding(.bottom)
-                        .padding(.trailing, 20)
-                case "Follower":
-                Button {
-                    
-                } label: {
-                    
-                }
-                case "Follow":
-                Button {
+            CircleImageView(user: notification.user ?? User.MOCK_USERS[0], diameter: .small)
+                .padding(.leading, 20)
+                .padding(.trailing, 5)
+            let user = notification.user?.username ?? ""
+            Text("\(user) \(notification.caption)")
+                .font(.footnote)
+                .fontWeight(.light)
+                .padding(.trailing, 10)
+            Spacer()
+            switch notification.notificationType {
+            case "Like":
+                Image("FieldSittingG")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40)
+                    .padding(.bottom)
+                    .padding(.trailing, 20)
+            case "Follower":
+            Button {
                 
-                } label: {
-                
-                }
-                default:
-                    Text("")
-                }
+            } label: {
+                Text("Follow")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .cornerRadius(5)
+                    .background(.blue)
+                    .foregroundColor(.white)
             }
-//            Notification.MOCK_Notification[0].notificationType == "Like" ? Button {
-//
-//            }
+            case "Follow":
+            Button {
+            
+            } label: {
+                Text("Follow")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .cornerRadius(5)
+                    .background(.blue)
+                    .foregroundColor(.white)
+            }
+            default:
+                Text("")
+            }
         }
     }
 }
 
 struct NotificationCell_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationCell()
+        NotificationCell(notification: Notification.MOCK_Notification[0])
     }
 }

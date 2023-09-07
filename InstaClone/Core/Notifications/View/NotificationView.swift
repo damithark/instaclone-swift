@@ -13,7 +13,9 @@ struct NotificationView: View {
             ScrollView {
                 VStack {
                     Spacer(minLength: 30)
-                    NotificationCell()
+                    ForEach(Notification.MOCK_Notification, id: \.self) { notification in
+                        NotificationCell(notification: notification)
+                    }
                 }
             }
             .navigationTitle("Notifications")
