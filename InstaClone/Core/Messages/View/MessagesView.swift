@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct MessagesView: View {
+    
+    @State private var searchText = ""
+    
     var body: some View {
-        Text("Messages View")
+        NavigationStack {
+            ScrollView {
+                LazyVStack (spacing: 12) {
+                    
+                }
+                .searchable(text: $searchText, prompt: "Search...")
+                .padding(.top, 8)
+            }
+        }
     }
 }
 
