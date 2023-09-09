@@ -20,6 +20,11 @@ struct MessagesView: View {
                 .searchable(text: $searchText, prompt: "Search...")
                 .padding(.top, 8)
             }
+            .navigationDestination(for: User.self, destination: { user in
+                
+            })
+            .navigationTitle("Messages")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
