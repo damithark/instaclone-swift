@@ -12,7 +12,7 @@ struct NotificationCell: View {
     let notification: Notification
     
     var body: some View {
-        HStack (alignment: .top) {
+        HStack (alignment: .center) {
             CircleImageView(user: notification.user ?? User.MOCK_USERS[0], diameter: .small)
                 .padding(.leading, 20)
                 .padding(.trailing, 5)
@@ -42,6 +42,7 @@ struct NotificationCell: View {
                     .foregroundColor(.white)
                     .cornerRadius(6)
                     .padding(.trailing, 20)
+                    .padding(.vertical, 10)
             }
             case "Follow":
             Button {
@@ -55,6 +56,7 @@ struct NotificationCell: View {
                     .foregroundColor(.white)
                     .cornerRadius(6)
                     .padding(.trailing, 20)
+                    .padding(.vertical, 10)
             }
             default:
                 Text("")
